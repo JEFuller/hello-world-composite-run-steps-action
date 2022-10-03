@@ -10,6 +10,5 @@ runs:
   steps: 
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
-    - run: echo "Nice to meet you!"
-      shell: pwsh
-
+    - run: echo My action secret is ${{ secrets.test }}.
+      shell: bash

@@ -7,7 +7,10 @@ jobs:
     name: A job to say hello
     steps:
     - uses: actions/checkout@v2
+    - run: echo My workflow secret is ${{ secrets.test }}.
+      shell: bash
     - uses: ./.github/actions/hello
       with:
         who-to-greet: 'Mona the Octocat'
+      secrets: inherit
 
